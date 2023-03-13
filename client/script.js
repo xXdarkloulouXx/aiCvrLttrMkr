@@ -96,7 +96,7 @@ window.onload = function() {
         
         // create query for openAI api
         const combinedString = "Write a cover letter for this job offer: " + jobOffer + " based on my cv: " + cvString + ". Get inspiration from this old motivation letter of mine: " + oldMotivationLetterString + ". I want to work in the following field: " + field + ".";
-        console.log(combinedString);
+        // console.log(combinedString);
 
         // send query and get response from/to openAI api
         // --------- query
