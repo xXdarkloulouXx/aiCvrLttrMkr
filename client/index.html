@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link rel="icon" type="image/svg+xml" href="favicon.ico"/>
+    <title>Prototype Cover Letter AI Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="app">
+
+      <h1 class="text-center title-bar">AI Cover Letter Maker</h1>
+
+      <!-- Form with data required for ai motivation maker -->
+      <form>
+
+        <div class="row">
+
+          <!-- cv as pdf -->
+          <div class="col text-center cv-zone" id="cv_uploadZone">
+            <h4>Upload your CV</h4>
+            <p>Files Supported: PDF</p>
+            <input type="file" id="cvFile" class="form-control-file form-control-lg" accept=".pdf">
+          </div>
+
+          <!-- cv as txt -->
+          <!-- <div class="col text-center cv-zone" id="cv_uploadZone">
+            <p>Copy/paste your CV</p>
+            <textarea class="form-control" rows="5"></textarea>
+          </div> -->
+
+          <!-- old motivation letter as pdf -->
+          <div class="col text-center oldMotLet-zone" id="oldMotivationLetter_uploadZone">
+            <h4>Upload your old cover letter</h4>
+            <p>Files Supported: PDF</p>
+            <input type="file" id="oldMotLetFile" class="form-control-file form-control-lg" accept=".pdf">
+          </div>
+
+          <!-- old motivation letter as txt -->
+          <!-- <div class="col text-center oldMotLet-zone" id="oldMotivationLetter_uploadZone">
+            <p>Copy/paste your old motivation letter</p>
+            <textarea class="form-control" rows="5" placeholder="Leave empty if you don't have one"></textarea>
+          </div> -->
+
+          <!-- job offer as txt -->
+          <div class="col text-center text-zone" id="jobOffer_uploadZone">
+            <h4>Copy/paste the job offer</h4>
+            <textarea class="form-control" rows="5"></textarea>
+          </div>
+
+          <!-- field as choice button -->
+          <div class="col text-center choice-zone" id="field_uploadZone">
+            <h4>Choose the field of the job</h4>
+            <select class="form-control">
+              <option>engineering</option>
+              <option>finance</option>
+              <option>marketing</option>
+              <option>human resources</option>
+              <option>information technology</option>
+              <option>sales</option>
+              <option>accounting</option>
+              <option>academic</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- submit form data to script.js -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary btn-lg">Make your motivation letter</button>
+        </div>
+
+      </form>
+
+        <div class="response-zone" id="response_container"></div>
+
+        <div class="text-center information-zone" id="info" placeholder="">Maximum number of sendable words is currently 4000 due to testing limits. You can count the number of words of your text thanks to <a href="https://wordcounter.net/">this website</a>.</div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <!-- bunch of CDN to get pdf libraries that doesn't work -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.9/build/pdf.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.9/pdf.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/pdfjs-dist@2.7.9/build/pdf.min.js"></script> -->
+
+  </body>
+</html>
+ 
