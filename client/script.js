@@ -95,7 +95,11 @@ window.onload = function() {
         loader(responseContainer)
         
         // create query for openAI api
-        const combinedString = "Write a cover letter for this job offer: " + jobOffer + " based on my cv: " + cvString + ". Get inspiration from this old motivation letter of mine: " + oldMotivationLetterString + ". I want to work in the following field: " + field + ".";
+        const combinedString = "Write an impactful cover letter for this job offer: " + jobOffer + " based on my cv: " + cvString + ". Get inspiration from this old motivation letter of mine: " + oldMotivationLetterString + ". I want to work in the following field: " + field + ". This cover letter must be around 350 words long.";
+
+        // no length --> 3 paragraphes pour structurer chat
+
+
         // console.log(combinedString);
 
         // send query and get response from/to openAI api
